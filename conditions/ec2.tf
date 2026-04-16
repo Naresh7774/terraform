@@ -24,3 +24,6 @@ resource "aws_security_group" "allow_all" {
     protocol         = "-1" # -1 means all protocols
     cidr_blocks      = ["0.0.0.0/0"] # internet
   }
+  tags = {
+    Name = "allow-all"
+  }
