@@ -22,3 +22,7 @@ output "ami_id" {
     value = data.aws_ami.joindevops.id
 }
 
+data "aws_instance" "mongodb" {
+    instance_id = "i-0355f99cd46d41298"
+}
+
