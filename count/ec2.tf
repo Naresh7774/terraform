@@ -7,3 +7,8 @@ resource "aws_instance" "terraform" {
     tags = {
         Name = var.instances[count.index]
         Terraform = "true"
+        Project = "roboshop"
+    }
+}
+
+resource "aws_security_group" "allow_all" {
