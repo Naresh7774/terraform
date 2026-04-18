@@ -10,3 +10,7 @@ resource "aws_security_group" "roboshop_instance" {
   
   # block
   dynamic "ingress" {
+    for_each = toset(var.ingress_ports)
+    content{
+        from_port        = ingress.value # here ingress is special key word
+        to_port          = ingress.value
