@@ -40,4 +40,12 @@ resource "aws_security_group" "lifecycle" {
     cidr_blocks      = ["0.0.0.0/0"] # internet
   }
 
- 
+  tags = {
+    Name = "lifecycle"
+  }
+  # lifecycle {
+  #   create_before_destroy = true
+  #   prevent_destroy = true
+  # }
+
+}
