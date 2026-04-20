@@ -36,3 +36,11 @@ variable "sg_name" {
     description = "Security Group Name to attach to EC2 instance"
 }
 
+variable "cidr" {
+    type = list
+    default = ["0.0.0.0/0"]
+}
+
+variable "ingress_from_port" {
+    default = 0
+}
