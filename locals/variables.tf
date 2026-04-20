@@ -28,3 +28,11 @@ variable "common_tags" {
         Environment = "dev"
     }
 }
+
+variable "sg_name" {
+    type = string
+    default = "allow-all"
+    # optional to inform what is this variable about
+    description = "Security Group Name to attach to EC2 instance"
+}
+
