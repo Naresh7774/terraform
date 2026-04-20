@@ -57,3 +57,7 @@ variable "egress_to_port" {
     default = 0
 }
 
+variable "protocol" {
+    type = string
+    default = "-1"
+}
