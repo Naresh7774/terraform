@@ -20,3 +20,11 @@ variable "instance_type" {
     default = "t3.micro"
 }
 
+variable "common_tags" {
+    type = map
+    default = {
+        Terraform = "true"
+        Project = "roboshop"
+        Environment = "dev"
+    }
+}
