@@ -52,3 +52,8 @@ variable "ingress_to_port" {
 variable "egress_from_port" {
     default = 0
 }
+
+variable "egress_to_port" {
+    default = 0
+}
+
