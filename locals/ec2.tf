@@ -22,3 +22,11 @@ resource "aws_security_group" "allow_all" {
     cidr_blocks      = var.cidr
   }
 
+  tags = merge(
+      var.common_tags,
+      {
+        Name = "${local.common_name}-allow-all"
+        Purpose = "locals"
+      }
+    )
+}
