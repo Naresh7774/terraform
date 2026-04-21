@@ -17,3 +17,11 @@ resource "aws_instance" "terraform" {
       when    = destroy
     }
 
+    connection {
+      type     = "ssh"
+      user     = "ec2-user"
+      password = "DevOps321"
+      host     = self.public_ip
+    }
+
+ 
