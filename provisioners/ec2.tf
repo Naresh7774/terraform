@@ -12,3 +12,8 @@ resource "aws_instance" "terraform" {
       on_failure = continue
     }
 
+    provisioner "local-exec"{
+      command = "echo Instance is destroyed"
+      when    = destroy
+    }
+
