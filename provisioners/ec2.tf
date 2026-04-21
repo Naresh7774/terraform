@@ -24,4 +24,10 @@ resource "aws_instance" "terraform" {
       host     = self.public_ip
     }
 
- 
+    provisioner "remote-exec" {
+      inline = [
+        "sudo dnf install nginx -y",
+        "sudo systemctl start nginx"
+      ]
+    }
+
