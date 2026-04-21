@@ -31,3 +31,12 @@ resource "aws_vpc_peering_connection" "dev_prod" {
   }
 }
 
+resource "aws_vpc_peering_connection_accepter" "peer" {
+  provider                  = aws.prod
+  vpc_peering_connection_id = aws_vpc_peering_connection.dev_prod.id
+  auto_accept               = true
+
+  tags = {
+    Name = "roboshop-dev-to-prod"
+  }
+}
