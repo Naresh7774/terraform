@@ -30,3 +30,23 @@ variable "cidr" {
     default = ["0.0.0.0/0"]
 }
 
+variable "ingress_from_port" {
+    default = 0
+}
+
+variable "ingress_to_port" {
+    default = 0
+}
+
+variable "egress_from_port" {
+    default = 0
+}
+
+variable "egress_to_port" {
+    default = 0
+}
+
+variable "protocol" {
+    type = string
+    default = "-1"
+}
