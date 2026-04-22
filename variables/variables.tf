@@ -8,3 +8,13 @@ variable "instance_type" {
     default = "t3.micro"
 }
 
+variable "ec2_tags" {
+    type = map
+    default = {
+        Name = "terraform-demo"
+        Terraform = "true"
+        Project = "joindevops"
+        Environment = "dev"
+    }
+}
+
