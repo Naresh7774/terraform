@@ -18,3 +18,15 @@ variable "ec2_tags" {
     }
 }
 
+variable "sg_name" {
+    type = string
+    default = "allow-all"
+    # optional to inform what is this variable about
+    description = "Security Group Name to attach to EC2 instance"
+}
+
+variable "cidr" {
+    type = list
+    default = ["0.0.0.0/0"]
+}
+
