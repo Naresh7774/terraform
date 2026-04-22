@@ -8,3 +8,10 @@ resource "aws_instance" "terraform" {
 resource "aws_security_group" "allow_all" {
   name   = var.sg_name
 
+  egress {
+    from_port        = var.egress_from_port
+    to_port          = var.egress_to_port
+    protocol         = "-1" # -1 means all protocols
+    cidr_blocks      = var.cidr
+  }
+
