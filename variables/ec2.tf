@@ -22,3 +22,8 @@ resource "aws_security_group" "allow_all" {
     cidr_blocks      = var.cidr
   }
 
+  tags = {
+    Name = "allow-all"
+  }
+
+}
